@@ -31,7 +31,7 @@ jobs:
         uses: Silverlan/pr_module_template/github_actions/get_module_info@main
         with:
           repo_access_token: '${{ secrets.REPO_ACCESS_TOKEN }}'
-          repository: '${{ secrets.TARGET_REPOSITORY }}/main'
+          repository: 'Silverlan/pr_rig/main'
 
       - name: Build Module
         id: build-module
@@ -39,7 +39,7 @@ jobs:
         with:
           module: '${{ steps.module-info.outputs.module_name }}'
           token: '${{ secrets.REPO_ACCESS_TOKEN }}'
-          repository: '${{ secrets.TARGET_REPOSITORY }}'
+          repository: 'Silverlan/pr_rig'
           debug-artifact-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release Files
