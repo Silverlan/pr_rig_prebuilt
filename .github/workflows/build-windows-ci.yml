@@ -1,7 +1,8 @@
 name: Build - Windows
 
 on:
-  push:
+  workflow_dispatch:
+    inputs:
 
 jobs:
   call-workflow:
