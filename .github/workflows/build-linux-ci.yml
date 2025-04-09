@@ -3,6 +3,8 @@ name: Build - Linux
 on:
   workflow_dispatch:
     inputs:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   call-workflow:
