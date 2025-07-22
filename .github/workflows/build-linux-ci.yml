@@ -14,6 +14,7 @@ jobs:
       repository: 'Silverlan/pr_rig'
       branch: 'main'
       os: linux
+      tag: ${{ github.event_name == 'schedule' ? 'latest' : '' }}
     secrets:
       repository_token: ${{ secrets.REPO_ACCESS_TOKEN }}
     permissions:
