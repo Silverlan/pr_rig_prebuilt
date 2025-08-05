@@ -13,6 +13,7 @@ jobs:
     with:
       repository: 'Silverlan/pr_rig'
       branch: 'main'
+      pragma-branch: 'develop'
       os: linux
       tag: ${{ github.event_name == 'schedule' && 'latest' || '' }}
     secrets:
