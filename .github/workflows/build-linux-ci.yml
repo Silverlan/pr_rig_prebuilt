@@ -3,6 +3,8 @@ name: Build - Linux
 on:
   workflow_dispatch:
     inputs:
+  repository_dispatch:
+    types: [trigger-build]
   schedule:
     - cron: '0 0 * * *'
 
